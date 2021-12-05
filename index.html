@@ -1,0 +1,1004 @@
+<!---Created by - Monu ----
+    ☆ A website UI (TechMall.com)
+    ☆ Points to be noted:'
+      □ Nav Icon transition
+      □ Smiling Website Design
+      □ Click the heart to add the product in your wishlist
+      □ Use the Nav Bar to Open and Close:- Home,Cart,Wishlist...
+      □ 3-D rotating Cube showing Offers.....D
+      Etc.......)
+   ☆ All the suggestions are most welcome........)
+   ☆ Hope you like it......)
+
+All the images credits goes to their owners, you can check out website by the src of the images ;) 
+--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TechMall.com || Online Technology Shopping Website </title>
+    <!-----Created By - Monu ------>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Coiny|Ubuntu|Metal+Mania|Yatra+One">
+    <style>
+    /*-----Created by - Monu------>
+/*----CSS----*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    outline:none;
+}
+html,body{
+    height:100%;
+    width:100%;
+    scroll-behaviour:smooth;
+    font-size:5vw;
+    overflow-x:hidden;
+}
+body{
+    width:100%;
+    background:#eef;
+    font-family:Ubuntu;
+    position:relative ;
+}
+section{
+    position:relative;
+    overflow:hidden;
+    margin:auto;
+    min-height:100%;
+    display:non;
+}
+@media screen and (min-width:560px){
+    html{
+        font-size:28px;
+    }
+    body{
+        margin-left:50%;
+        -webkit-transform:translateX(-50%);
+        transform:translateX(-50%);
+        width:560px;
+    }
+    nav{
+        width:560px;
+    }
+}
+#first_page{
+    position:fixed;
+    width:100%;
+    max-width:560px;
+    height:100%;
+    background:#fef;
+    top:0;
+    overflow:hidden;
+    left:50%;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    z-index:60;
+    transition:left 1s;
+    -webkit-transition:left 1s;
+}
+#first_page>h2{
+    text-align:center;
+    font-family:Coiny;
+    color:#4400ff;
+    position:relative;
+    top:8%;
+    font-size:36px;
+    line-height:100px;
+}
+#first_page>h2:after{
+    content:"";
+    width:150px;
+    font-size:20px;
+    font-family:Ubuntu;
+    height:150px;
+    border-bottom:5px yellow solid;
+    display:block;
+    border-radius:50%;
+    margin:-135px auto;
+}
+#first_page>div{
+    width:100%;
+    border-bottom:6px #666 double;
+    position:absolute ;
+    bottom:10%;
+    left:0;
+}
+#first_page>div>img{
+    width:25%;
+    position:relative;
+    left:-25%;
+    margin-bottom:-10px;
+    animation:move 5s linear;
+    -webkit-animation:move 5s linear;
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+}
+@keyframes move{
+    to{
+        left:100%;
+    }
+}
+@-webkit-keyframes move{
+    to{
+        left:100%;
+    }
+}
+header{
+    padding:7px 5px 0;
+    position:relative;
+    width:100%;
+    margin:0 0 36px;
+    background-color:#4400ff;
+    transition:margin-top .3s;
+    -webkit-transition:margin-top .3s ;
+}
+header>div{
+    margin:0 1px ;
+}
+#h1{
+    display:flex;
+    display:-webkit-box;
+    font-size:19px;
+}
+header>.design{
+    width:100%;
+    height:68px;
+    border-radius:50%;
+    background:#4400ff;
+    position:absolute;
+    z-index:-1;
+    left:50%;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    bottom:-31px;
+    box-shadow:0 0 5px #222;
+}
+header>.design:before{
+    content:"";
+    width:90px;
+    height:70px;
+    border-bottom:3px white solid;
+    border-radius:50%;
+    display:block;
+    margin:-13px auto 0;
+}
+#nav-icon,#h1>span,#h1>button{
+    display:block;
+    border-radius:5px;
+}
+#h1>button{
+    width:43px;
+    border:none;
+    background:transparent;
+    color:white;
+}
+#h1>span{
+    height:36px;
+    flex:1;
+    -webkit-box-flex:1;
+    display:flex;
+    display:-webkit-box;
+    align-items:center;
+    -webkit-box-align:center;
+    font-family:'Coiny';
+    color:white;
+    font-size:24px;
+    padding:0 10px 8px;
+}
+button{
+    border:none;
+    background-color:transparent;
+}
+#nav-icon{
+    width:43px;
+    height:36px;
+    position:relative;
+    z-index:51;
+    display:flex;
+    display:-webkit-box;
+    padding:8px 9px;
+    flex-direction:column;
+    -webkit-box-orient:vertical;
+    justify-content:center;
+    -webkit-box-pack:justify;
+    overflow:hidden;
+}
+#name{
+    font-family:'Metal Mania';
+}
+#nav-icon>span{
+    display:block;
+    width:25px;
+    height:3px;
+    border-radius:4px;
+    background-color:white;
+    transition:.5s;
+    -webkit-transition:.5s;
+}
+#nav-icon>span:nth-child(2) {
+    width:20px;
+}
+.cross>span:nth-child(2) {
+    opacity:1;
+    margin-left:-50px;
+}
+.cross>#line1{
+    transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+}
+.cross>#line2 {
+    transform:rotate(-135deg);
+    -webkit-transform:rotate(-135deg);
+}
+#search-bar{
+    flex:1;
+    -webkit-box-flex:1;
+    display:flex;
+    display:-webkit-box;
+    padding:1px;
+    height:42px;
+    margin:4px 2px 0;
+    background-color:white;
+    border-radius:5px;
+}
+#search-bar>input{
+    flex:1;
+    -webkit-box-flex:1;
+    padding:9px;
+    display:flex;
+    display:-webkit-box;
+    align-items:center;
+    font-size:16px;
+    -webkit-box-align:center;
+    border:none;
+    background-color:white;
+    border-radius:5px;
+    transition:width .9s;
+    -webkit-transition:width .9s;
+}
+#search-bar>button{
+   width:38px;
+   display:block;
+   color:#4400ff;
+   font-weight:bold;
+   font-size:18px;
+}
+nav{
+    width:100%;
+    background-color:rgba(0,0,0,.75);
+    height:100%;
+    position:fixed;
+    top:0;
+    margin-left:-100%;
+    text-align:center;
+    padding:50px 0;
+    font-family:'Yatra One';
+    z-index:50;
+    transition:left .5s,margin-left 5s;
+    -webkit-transition:left .5s,margin-left .5s;
+    display:none;
+    flex-direction:column;
+    -webkit-box-orient:vertical;
+}
+nav>hr{
+    position:relative;
+    width:80%;
+    margin:-50px auto 0;
+}
+ul>hr{
+    width:60%;
+    position:relative;
+    margin:5px auto;
+}
+nav>div{
+    width:100%;
+    height:auto;
+    top:-50px;
+    position:relative;
+    padding:20px 0 15px;
+    display:flex;
+    display:-webkit-box;
+    align-items:center;
+    -webkit-box-align:center;
+    justify-content:center;
+    -webkit-box-pack:center;
+}
+nav>ul{
+    position:relative;
+    flex:1;
+    -webkit-box-flex:1;
+    display:flex;
+    display:-webkit-box;
+    flex-direction:column;
+    -webkit-box-orient:vertical;
+}
+nav>ul>li{
+    flex:1;
+    -webkit-box-flex:1;
+    display:flex;
+    display:-webkit-box;
+}
+nav>div>p{
+    color:white;
+    font-size:17px;
+    text-align:right;
+    padding:1px 4px;
+    margin:0 20px;
+    border-bottom:2px #fff groove;
+}
+nav>div>img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    display:block;
+}
+nav>ul>li>a{
+    color:white;
+    display:flex;
+    display:-webkit-box;
+    align-items:center;
+    -webkit-box-align:center;
+    justify-content:center;
+    -webkit-box-pack:center;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:14px;
+    flex:1;
+    -webkit-box-flex:1;
+}
+nav>ul>li>a:before{
+    padding:0 8px 4px;
+    display:block;
+}
+hr{
+    display:block;
+    margin:auto;
+}
+/*---3-D Rotating Cobe------*/
+#cube-cont{
+    width:95%;
+    height:13rem; 
+    background:black;
+    overflow:hidden;
+    position:relative;
+    border-radius:10px;
+    margin:10px auto;
+    perspective:900px;
+    padding:1.6rem 0 0;
+    -webkit-perspective:900px;
+}
+#cube{
+    width:13rem;
+    height:9rem;
+    background:#eef;
+    position:relative;
+    margin:0 auto;
+    transition:transform 3s;
+    transform-style:preserve-3d;
+    animation:turn 12s linear infinite;
+    -webkit-transition:-webkit-transform 3s;
+    -webkit-transform-style:preserve-3d;
+    -webkit-animation:turn 12s linear infinite;
+}
+@keyframes turn{
+    17% {transform:rotateY(0deg);}
+    25% {transform:rotateY(-90deg);}
+    42% {transform:rotateY(-90deg);}
+    50% {transform:rotateY(-180deg);}
+    67% {transform:rotateY(-180deg);}
+    75% {transform:rotateY(-270deg);}
+    92% {transform:rotateY(-270deg);}
+    100% {transform:rotateY(-360deg);}
+}
+@-webkit-keyframes turn{
+    17% {-webkit-transform:rotateY(0deg);}
+    25% {-webkit-transform:rotateY(-90deg);}
+    42% {-webkit-transform:rotateY(-90deg);}
+    50% {-webkit-transform:rotateY(-180deg);}
+    67% {-webkit-transform:rotateY(-180deg);}
+    75% {-webkit-transform:rotateY(-270deg);}
+    92% {-webkit-transform:rotateY(-270deg);}
+    100% {-webkit-transform:rotateY(-360deg);}
+}
+#cube>div{
+    width:100%;
+    height:100%;
+    position:absolute;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+}
+#cube>div>img{
+    width:100%;
+    height:100%;
+    display:block;
+}
+div.front{
+    transform:translateZ(6.5rem);
+    -webkit-transform:translateZ(6.5rem);
+}
+div.right{
+    transform:rotateY(90deg) translateX(50%);
+    transform-origin:100% 0;
+    -webkit-transform:rotateY(90deg) translateX(50%);
+    -webkit-transform-origin:100% 0;
+}
+div.back{
+    transform:rotateY(180deg) translateZ(6.5rem);
+    -webkit-transform:rotateY(180deg) translateZ(6.5rem);
+}
+div.left{
+    transform:rotateY(-90deg) translateX(-50%);
+    transform-origin:0 0;
+    -webkit-transform:rotateY(-90deg) translateX(-50%);
+    -webkit-transform-origin:0 0;
+}
+div.dot-box{
+    display:flex;
+    display:-webkit-box;
+    justify-content:center;
+    -webkit-box-pack:center;
+    position:absolute;
+    bottom:6%;
+    left:50%;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
+}
+.dot-box>span{
+    display:block;
+    width:9.6px;
+    height:9.6px;
+    background-color:rgba(255,255,255,.5);
+    border-radius:50%;
+    margin:0 .5rem;
+    transition:background-color .7s;
+    -webkit-transition:background-color .7s;
+}
+.products1,.products2{
+    margin:6% 12px;
+    box-shadow:0 0 3px black;
+    display:flex;
+    display:-webkit-box;
+    flex-direction:column;
+    -webkit-box-orient:vertical;
+    border-radius:8px;
+    padding:1%;
+}
+.products1>h3{
+    padding:2% 2%;
+}
+.products1>div,.products2>div{
+    flex:1;
+    -webkit-box:1;
+    display:flex;
+    display:-webkit-box;
+    justify-content:center;
+    -webkit-box-pack:center;
+}
+.products1>div>div,.products2>div>div{
+    width:8.5rem;
+    margin:.2rem;
+    padding:.2rem;
+    position:relative;
+    display:flex;
+    display:-webkit-box;
+    flex-direction:column;
+    -webkit-box-orient:vertical;
+}
+.products2>div>div{
+    margin:0 .3rem;
+}
+.products1>div>div>img,.products2>div>div>img,.products3>div>img{
+    width:100%;
+    display:block;
+    border-radius:8px;
+    flex:1;
+    -webkit-box-flex:1;
+    background-color:white;
+}
+.products1>div>div>p,.products2>div>div>p,.products3>div>p{
+    padding:2%;
+    overflow:hidden;
+    width:100%;
+    font-size:15px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    text-align:center;
+}
+.products1>p{
+    text-align:right;
+    font-size:13px;
+    padding:1% 2%;
+}
+.products2{
+    box-shadow:none;
+}
+.products3{
+    display:flex;
+    display:-webkit-box;
+    overflow-x:scroll;
+    margin:20px 0;
+}
+.products3>div{
+    margin:0 7px;
+    width:8rem;
+    border-radius:8px;
+    border:2px #4400ff solid;
+    padding:7px;
+    position:relative;
+    display:flex;
+    display:-webkit-box;
+    flex-direction:column;
+    -webkit-box-orient:vertical;
+    align-items:center;
+    -webkit-box-align:center;
+}
+.products>div>p{
+    margin-bottom:-5px;
+}
+.products3>div.see_all{
+    display:flex;
+    display:-webkit-box;
+    align-items:center;
+    -webkit-box-align:center;
+    justify-content:center;
+    -webkit-box-pack:center;
+}
+.products3>div.see_all>button{
+    display:block;
+    width:64px;
+    height:64px;
+    color:white;
+    border-radius:50%;
+    background-color:#77f;
+    font-size:15px;
+}
+.offer{
+    width:100%;
+}
+#empty_cart,#wishlist{
+    width:100%;
+    height:auto;
+    color:#555;
+    text-align:center;
+    display:none;
+    padding:20px;
+    line-height:20px;
+    margin:-20px auto;
+}
+#wishlist{margin:0 auto;}
+#empty_cart>img{
+    display:block;
+    max-width:80%;
+    margin:auto;
+}
+nav>.rights{
+    position:absolute;
+    bottom:1%;
+    width:100%;
+    text-align:center;
+    font-size:12px;
+}
+.heart,.bi-heart-fill{
+    position:absolute;
+    top:9px;
+    right:9px;
+    color:red;
+    font-size:20px;
+}
+.bi-heart-fill{
+    animation:beat 1s;
+    -webkit-animation:beat 1s;
+}
+#wishlist>h3{
+    margin:-16px auto 0;
+    background:#eef;
+}
+#wishlist>.products1>div>.p{
+    width:12rem;
+    margin:.5rem 0;
+    background:white;
+    border-radius:8px;
+}
+@keyframes beat{
+    33%{transform:scale(1.3);}
+    66%{transform:scale(.8);}
+    100%{transform:scale(1);}
+}
+@-webkit-keyframes beat{
+    33%{-webkit-transform:scale(1.3);}
+    66%{-webkit-transform:scale(.8);}
+    100%{-webkit-transform:scale(1);}
+}
+footer{
+    background-color:#000;
+    padding:0 0 10px;
+    position:relative;
+    color:white;
+    margin-top:2.5rem;
+    display:flex;
+    display:-webkit-box;
+    align-items:center;
+    -webkit-box-align:center;
+    flex-direction:column;
+    -webkit-box-orient:vertical;
+    bottom:0;
+}
+footer>.design{
+    width:110%;
+    height:4.2rem;
+    border-radius:50%;
+    position:absolute;
+    z-index:-1;
+    left:50%;
+    top:-75px;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
+    box-shadow:inset 0 -2px 5px #222,0 0 0 2.2rem #000;
+}
+footer>.design:before{
+    content:"";
+    width:100%;
+    height:70px;
+    position:absolute;
+    top:-53%;
+    background:#eef;
+}
+.follow{
+    width:100%;
+    padding:20px 0 30px;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background:-webkit-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size:100% 100%;
+}
+.follow>p:nth-child(1){
+    text-align:center;
+    padding-bottom:20px;
+    font-size:24px;
+    font-family:"Coiny";
+}
+.icons{
+    display:flex;
+    display:-webkit-box;
+    justify-content:center;
+    -webkit-box-pack:center;
+    align-items:center;
+    -webkit-box-align:center;
+}
+.icons>a>img{
+  display:block;
+  width:100%;
+  height:100%;
+  border-radius:10px;
+}
+.icons>img,.icons>a{
+  display:block;
+  text-decoration:none;
+  color:white;
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  margin:0 4%;
+}
+#contact{
+    background:#000;
+}
+#contact>p:nth-child(1){
+    font-size:20px;
+    padding:8px 0;
+}
+.mail{
+    font-size:14px;
+    color:#ccc;
+}
+#rights,.rights{
+  font-size:smaller;
+  color:#ccc;
+  line-height:22px;
+  text-align:center;
+  padding:12px 0 ;
+}
+    </style>
+</head>
+<body>
+    <!---Loading Page------->
+    <div id="first_page">
+        <h2>TechMall.com</h2>
+        <div>
+            <img id="loader" src="https://image.flaticon.com/icons/png/512/2037/2037021.png">
+        </div>
+    </div>
+    <section>
+        <!----Header------>
+        <header>
+            <!---Nav Icon------>
+            <div id="h1">
+                <div id="nav-icon">
+                    <span id="line1"></span>
+                    <span></span>
+                    <span id="line2"></span>
+                </div>
+                <span>TechMall.com</span>
+                <button class="bi-bell-fill"></button>
+            </div>
+            <!---Search Bar------>
+            <div id="search-bar">
+                <input id="search" type="search" placeholder="Search for Gadgets, Mobiles etc." >
+                <button class="bi-search"></button>
+                <button class="bi-mic"></button>
+            </div>
+            <span class="design"></span>
+        </header>
+        <!-----Nav Bar------->
+        <nav>
+            <div>
+                <p id="name">Monu</p>
+                <img id="propic" src="https://api.sololearn.com/uploads/avatars/19277040.jpg">
+            </div>
+            <hr>
+            <ul>
+                <li><a href="#" class="bi-house">Home</a></li>
+                <li><a href="#" class="bi-cart">My Cart</a></li>
+                <li><a class="bi-heart" onclick="wishli()" href="#" >My Wishlist</a></li>
+                <li><a class="bi-person" href="#" >My Account</a></li>
+                <hr>
+                <li><a onclick="navigate()" href="#contact" >Contact Us</a></li>
+                <li><a href="" >About Us</a></li>
+                <li><a href="" >Privacy Policy</a></li>
+                <li><a href="" >Help Centre</a></li>
+                <li><a href="" >Legal</a></li>
+            </ul>
+            <p class="rights"> &copy;2021, Monu. All rights reserved.</p>
+        </nav>
+        <!---Home------->
+        <div id="home">
+        <!----Rotating Cube Panel------>
+        <div id="cube-cont">
+            <div id="cube">
+                <div class="front"><img src="https://st2.depositphotos.com/1001941/11444/v/380/depositphotos_114445088-stock-illustration-independence-day-sale-poster-or.jpg"></div>
+                <div class="right"><img src=" https://images-eu.ssl-images-amazon.com/images/G/31/img21/Audio/Boat/R2330-Shot-4_440x440.jpg "></div>
+                <div class="back"><img src=" https://images-eu.ssl-images-amazon.com/images/G/31/img21/Laptops/675x645.jpg "></div>
+                <div class="left"><img src=" https://images-eu.ssl-images-amazon.com/images/G/31/img21/Monitors/Co-op/LG/UG_1242x450_july.jpg "></div>
+            </div>
+            <div class="dot-box"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="products1">
+            <h3>Upto 30% Off | Top Smartphone Brands</h3>
+            <div>
+                <div class="p" >
+                    <img src="https://images.samsung.com/is/image/samsung/p5/uk/smartphones/galaxy-s10/buynew/Common_M000_S10_720.jpg">
+                    <p>Samsung Smartphones</p>
+                </div>
+                <div class="p">
+                    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1600136692.96833494.png?thumb=1&w=385&h=385&width=385&height=385">
+                    <p>Redmi Smartphones</p>
+                </div>
+            </div>
+            <div>
+                <div class="p" >
+                    <img src="https://bingkart.com/4558-large_default/oppo-k3-aurora-blue-6gb-ram-amoled-display-64gb-storage-3765mah-battery.jpg">
+                    <p>Oppo Smartphones</p>
+                </div>
+                <div class="p" >
+                    <img src=" https://3.img-dpreview.com/files/p/E~TS1180x0~articles/3653244647/OP8PRO-Onyx-Black.jpeg ">
+                    <p>1+ Smartphones</p>
+                </div>
+            </div>
+            <p>More...</p>
+        </div>
+        <img src=" https://thumbs.dreamstime.com/b/%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C-sale-banner-smartphone-discount-gift-boxes-mobile-online-shopping-design-vector-illustration-209805667.jpg " class="offer">
+        <div class="products3">
+            <div class="p">
+                <img src="https://m.media-amazon.com/images/I/41212WwiTgL._AC_SY780_FMwebp_.jpg">
+                <p>Headphone</p>
+            </div>
+            <div class="p">
+                <img src="https://m.media-amazon.com/images/I/41TWRqE5PLL._AC_SY1000_FMwebp_.jpg">
+                <p>CCTV Camera</p>
+            </div>
+            <div class="p">
+                <img src="https://i.gadgets360cdn.com/products/cameras/large/1548234749_832_canon_eos-80d-24mp-dslr-camera.jpg?downsize=*:180&output-quality=80">
+                <p>DSLR Camera</p>
+            </div>
+            <div class="p">
+                <img src="https://cdn.shopify.com/s/files/1/0657/6821/products/BEHRINGERXM8500-3_grande.jpg?v=1613114673">
+                <p>Mic</p>
+            </div>
+            <div class="p">
+                <img src="https://m.media-amazon.com/images/I/41WskrNyD4L._AC_SY580_.jpg">
+                <p>Headphone with Microphone</p>
+            </div>
+            <div class="see_all">
+                <button>SEE<br>ALL</button>
+            </div>
+        </div>
+        <div class="products2">
+            <div>
+                <div class="p" >
+                    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1601293021.06313819.png">
+                    <p>Cool Analog Watch</p>
+                </div>
+                <div class="p" >
+                    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1599547836.16432398.png?width=420&height=420">
+                    <p>Smart Fitness Band</p>
+                </div>
+            </div>
+            <div>
+                <div class="p" >
+                    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1602740212.59944092.png?width=420&height=420">
+                    <p>Wireless earphone</p>
+                </div>
+                <div class="p" >
+                    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1598954033.54263100.jpg?width=420&height=420">
+                    <p>Mi Earphone</p>
+                </div>
+            </div>
+        </div>
+        <img src=" https://thumbs.dreamstime.com/b/vector-illustration-super-sale-banner-template-design-big-sales-special-offer-end-season-party-background-cool-136119596.jpg " class="offer">
+        <div class="products2">
+            <div>
+                <div class="p" >
+                    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1622742774.07527790.jpg">
+                    <p>Smart Television</p>
+                </div>
+                <div class="p" >
+                    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1615887773.58331975.png">
+                    <p>Mi Smart T.V.</p>
+                </div>
+            </div>
+            <div>
+                <div class="p" >
+                    <img src=" https://m.media-amazon.com/images/I/4101Dvt-gaL._AC_SY580_FMwebp_.jpg ">
+                    <p>Speaker</p>
+                </div>
+                <div class="p" >
+                    <img src=" https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20201126_1606382810_704161.jpeg ">
+                    <p>Bluetooth Speaker</p>
+                </div>
+            </div>
+        </div>
+        <div class="products1">
+            <h3>Upto 20% Off on all Laptop Brands</h3>
+            <div>
+                <div class="p" >
+                    <img src="https://m.media-amazon.com/images/I/41PnIUzyYML._AC_SY580_FMwebp_.jpg">
+                    <p>Lenovo</p>
+                </div>
+                <div class="p" >
+                    <img src=" https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/inspiron_notebooks/inspiron_13_5310/media-gallery/95-moonknight-inspiron-media-gallery-notebook-inspiron-13-5310-lb-5000x5000.psd?fmt=pjpg&amp;pscan=auto&amp;scl=1&amp;hei=402&amp;wid=402&amp;qlt=85,0&amp;resMode=sharp2&amp;op_usm=1.75,0.3,2,0&amp;size=402,402 ">
+                    <p>Dell</p>
+                </div>
+            </div>
+            <div>
+                <div class="p" >
+                    <img src="https://cdn1.smartprix.com/rx-i9LPUJyA3-w240-h290/huawei-matebook-13-l.webp">
+                    <p>Huawei</p>
+                </div>
+                <div class="p">
+                    <img src="https://www.notebookcheck.net/typo3temp/_processed_/e/0/csm_181004111903200301900006K_95047b6aab.jpg">
+                    <p>Microsoft</p>
+                </div>
+            </div>
+            <p>More...</p>
+        </div>
+        </div>
+        <div id="empty_cart">
+            <img src="https://image.flaticon.com/icons/png/512/2037/2037021.png" >
+            Your Cart is empty.
+        </div>
+        <div id="wishlist">
+            <h3>My Wishlist</h3>
+            <div class="products1"></div>
+        </div>
+        <!----Footer------>
+        <footer>
+            <div class="design"></div>
+            <div class="follow">
+                <p>Follow Us</p>
+                <p class="icons"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2sYQA43h6rGOaLk4hAJ-6YvxtXfPyP5TRQ&usqp=CAU" alt="facebook"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndHDdqRa1Lh4OM_MlRi-baoD114kHS_qKqQ&usqp=CAU" alt="instagram"> <a href="https://www.sololearn.com/Profile/19277040/?ref=app"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcedTebZFBcmnDudPT7SfpujqhpiIjmYIq7w&usqp=CAU" alt="Sololearn"></a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqdZ4Paj2OK3V_5nnH08rYZUoSqqmgDK1ZBA&usqp=CAU" alt="Twitter"></p>
+            </div>
+            <hr width="100%">
+            <div id="contact" class="follow">
+                <p>Contact Us</p>
+                <p class="icons mail">TechMall@gmail.com</p>
+            </div>
+            <hr width="70%">
+        <p id="rights">Help Centre<br>Legal<br>Privacy Policy<br>Conditions of use<br>&copy;2021, Monu. All rights reserved.</p>
+        </footer>
+    </section>
+<style>
+</style>
+<script type="text/javascript">
+    var main=document.getElementsByTagName("section")[0],wishlist=document.getElementById("wishlist"),header=document.getElementsByTagName("header")[0],search=document.getElementById("search"),mic=document.getElementsByClassName("bi-mic")[0] ,hearts=document.getElementsByClassName("heart"), p=document.getElementsByClassName("p"), prod1=document.getElementsByClassName("products1"),empty_cart=document.getElementById("empty_cart"), home_b=document.getElementsByClassName("bi-house")[0],cart=document.getElementsByClassName("bi-cart")[0],home=document.getElementById("home"),nr_b=document.getElementsByClassName("nr_b"),nav_row=document.getElementById("nav-row"),dot_box=document.getElementsByClassName("dot-box")[0], d=1,a = 0,nav_icon=document.getElementById("nav-icon"), nav_bar=document.getElementsByTagName("nav")[0];
+    nav_icon.addEventListener("click",navigate);
+    function navigate(){
+        nav_icon.classList.toggle("cross");
+        if(a==0){
+            nav_bar.style.marginLeft="0";
+            nav_bar.style.display="flex";
+            nav_bar.style.display="-webkit-box";
+            nav_icon.style.position="fixed";
+            a=1;
+        }
+        else{
+            nav_bar.style.marginLeft="-100%";
+            nav_icon.style.position="relative";
+            a=0;
+        }
+    }
+    dot_box.childNodes[0].style.backgroundColor="white";
+    setInterval(function(){
+        for(var i=0;i<dot_box.childNodes.length;i++){
+            dot_box.childNodes[i].style.backgroundColor="rgba(255,255,255,.5)";
+        }
+        if(d==4){d=0}
+            dot_box.childNodes[d].style.backgroundColor="white";
+            d++;
+    },3000)
+    for(var i=0;i<nr_b.length;i++){
+        nr_b[i].addEventListener("click",function(){
+            for(var j=0;j<nr_b.length;j++){
+                nr_b[j].classList.remove("awe");
+                this.classList.add("awe");
+            }
+        })
+    }
+    cart.addEventListener("click",function(){
+        home.style.display="none";
+        empty_cart.style.display="block";
+        wishlist.style.display="none";
+        navigate();
+    })
+    home_b.addEventListener("click",function(){
+        home.style.display="block";
+        wishlist.style.display="none";
+        empty_cart.style.display="none";
+        navigate();
+    })
+    for(var pp=0;pp<p.length;pp++){
+        var heart=document.createElement("b");
+        heart.classList.add("bi-heart");
+        heart.classList.add("heart")
+        p[pp].appendChild(heart);
+    } 
+    for(var h=0;h<hearts.length;h++){     
+        hearts[h].addEventListener("click",function(){
+            this.classList.toggle("bi-heart");
+            this.classList.toggle("bi-heart-fill")
+        })
+    }
+    function wishli(){
+        navigate();
+        wishlist.childNodes[3].innerHTML="";
+        home.style.display="none";
+        empty_cart.style.display="none";
+        wishlist.style.display="block";
+        var list=document.getElementsByClassName("bi-heart-fill");
+        for(z=0;z<list.length;z++){
+            wishlist.childNodes[3].innerHTML+='<div><div class="p" ><img src="'+list[z].parentNode.childNodes[1].src+'"><p>'+list[z].parentNode.childNodes[3].innerHTML+'</p></div></div>'
+        }
+    }
+    search.addEventListener("focus",function(){
+        mic.style.display="none";
+        header.style.marginTop="-38px";
+    })
+    search.addEventListener("blur",function(){
+        mic.style.display="block";
+        header.style.marginTop="0";
+        search.value="";
+    })
+    function load(){
+        var frst_page = document.getElementById("first_page");
+        frst_page.style.left="-100%";
+        setTimeout(function(){
+            frst_page.style.display="none";
+        },1000);
+    }
+    window.onload=setTimeout(load,5000)
+    
+</script>
+</body>
+</html>
+    
